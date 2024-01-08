@@ -79,3 +79,8 @@ reset.addEventListener("click",()=>{
   // document.querySelector('.line').style.display = "none";
   // document.querySelector('.line').style.width = `0vw`;
 })
+
+mute.addEventListener("click",()=>{
+  gameOver.pause();
+  music.pause();
+})

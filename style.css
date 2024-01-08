@@ -95,6 +95,26 @@ nav ul{
   background-color: rgb(128, 17, 239);
   box-shadow: 0 0 10px rgba(0, 0, 0, .7);
 }
+#mute{
+  padding: 10px 20px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(177, 103, 251);
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  font-family: 'Baloo Bhai 2', sans-serif;
+  transition: all 0.2s ease-out allow-discrete;
+  
+}
+#mute:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+#mute:active{
+  background-color: rgb(128, 17, 239);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+}
 
 .line{
   background-color: rgb(1, 252, 68);
