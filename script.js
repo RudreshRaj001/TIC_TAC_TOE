@@ -37,13 +37,14 @@ const checkWin = ()=>{
       // document.querySelector('.line').style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`;
       // document.querySelector('.line').style.display = "inline";
       music.pause();
+      gameOver.play();
     }
   })
 }
 
 
 // Game Logic
-// music.play();
+music.play();
 
 let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach(element =>{
@@ -52,7 +53,7 @@ Array.from(boxes).forEach(element =>{
     if(boxText.innerText === ''){
       boxText.innerText = turn;
       turn = changeTurn();
-      // audioTurn.play();
+      audioTurn.play();
       checkWin();
       if(!gameOver2){
         document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
@@ -73,6 +74,8 @@ reset.addEventListener("click",()=>{
   gameOver2 = false;
   document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
   document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px";
+  gameOver.pause();
+  music.play();
   // document.querySelector('.line').style.display = "none";
   // document.querySelector('.line').style.width = `0vw`;
 })
